@@ -4,7 +4,7 @@ WORKDIR /go/src/app
 COPY . .
 RUN go mod init
 env GO111MODULE=on
-#env GOPROXY=https://goproxy.io,direct
+env GOPROXY=https://goproxy.io,direct
 RUN go get -d -v ./...
 RUN go install -v ./...
 
